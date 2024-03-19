@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { SoHeaderModule } from './so-header/so-header.module';
 import { SoDetailsModule } from './so-details/so-details.module';
+import { TestModule } from './test/test.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -22,7 +23,7 @@ import { SoDetailsModule } from './so-details/so-details.module';
       trustServerCertificate: true
     }
   
-  }), SoHeaderModule, SoDetailsModule]
+  }), SoHeaderModule, SoDetailsModule, TestModule]
   ,
   controllers: [AppController],
   providers: [AppService],

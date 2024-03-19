@@ -1,11 +1,11 @@
 export class CreateSoDetailDto {
-    EntryNum: number;
+    DraftNum: string;
     ItemCode: string;
     ItemName: string;
     Quantity: number;
     UoM: string;
     UoMConv: number;
-    Whs: string;
+    Whse: string;
     InvStat: string;
     SellPriceBefDisc: number;
     DiscRate: number;
@@ -16,7 +16,7 @@ export class CreateSoDetailDto {
     TaxAmt: number;
     BelPriceDisc: number;
     Cost: number;
-    BelCost: number;
+    BelCost: string;
     ModeReleasing: string;
     SCPWDdisc: string;
     GrossTotal: number;

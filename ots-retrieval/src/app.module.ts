@@ -14,6 +14,8 @@ import { SrpModule } from './srp/srp.module';
 import { CostModule } from './cost/cost.module';
 import { StocksAvailabilityModule } from './stocks-availability/stocks-availability.module';
 import { ScDiscountModule } from './sc-discount/sc-discount.module';
+import { SalescrewModule } from './salescrew/salescrew.module';
+
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -33,7 +35,7 @@ import { ScDiscountModule } from './sc-discount/sc-discount.module';
     }
   
   })
-  ,CustomerModule, ItemModule, UomModule, LowerboundModule, DiscountPriceModule, TaxCodeModule, TaxRateModule, WarehouseSohModule, SrpModule, CostModule, StocksAvailabilityModule, ScDiscountModule],
+  ,CustomerModule, ItemModule, UomModule, LowerboundModule, DiscountPriceModule, TaxCodeModule, TaxRateModule, WarehouseSohModule, SrpModule, CostModule, StocksAvailabilityModule, ScDiscountModule, SalescrewModule],
   controllers: [AppController],
   providers: [AppService],
 })

@@ -15,9 +15,24 @@ export class SoDetailsService {
   ){}
 
   async create(createSoDetailDto: CreateSoDetailDto) {
-    const {EntryNum,ItemCode,ItemName,Quantity,UoM,UoMConv,Whs,InvStat,SellPriceBefDisc,DiscRate,SellPriceAftDisc,LowerBound,TaxCode,TaxCodePerc,TaxAmt,BelPriceDisc,Cost,BelCost,ModeReleasing,SCPWDdisc,GrossTotal} = createSoDetailDto;
+    const {DraftNum,ItemCode,ItemName,Quantity,UoM,UoMConv,Whse,InvStat,SellPriceBefDisc,DiscRate,SellPriceAftDisc,LowerBound,TaxCode,TaxCodePerc,TaxAmt,BelPriceDisc,Cost,BelCost,ModeReleasing,SCPWDdisc,GrossTotal} = createSoDetailDto;
 
-    const detail = await this.dataSource.query(`SP_ADD_SO_DETAILS ${EntryNum},'${ItemCode}','${ItemName}',${Quantity},'${UoM}',${UoMConv},'${Whs}','${InvStat}',${SellPriceBefDisc},${DiscRate},${SellPriceAftDisc},${LowerBound},'${TaxCode}',${TaxCodePerc},${TaxAmt},${BelPriceDisc},${Cost},${BelCost},'${ModeReleasing}','${SCPWDdisc}',${GrossTotal}`);
+    const detail = await this.dataSource.query(`SP_ADD_SO_DETAILS '${DraftNum}','${ItemCode}','${ItemName}',${Quantity},'${UoM}',${UoMConv},'${Whse}','${InvStat}',${SellPriceBefDisc},${DiscRate},${SellPriceAftDisc},${LowerBound},'${TaxCode}',${TaxCodePerc},${TaxAmt},${BelPriceDisc},${Cost},${BelCost},'${ModeReleasing}','${SCPWDdisc}',${GrossTotal}`);
     return {detail} ;
+  }
+
+  async findAll(){
+    const detail = await this.dataSource.query(
+      `SELECT * FROM SO_Details`
+    );
+    return detail;
+  }
+
+  // DELETE DETAILS
+  async delete(DraftNum : string){
+    const del = await this.dataSource.query(
+      `exec SP_DELETE_DETAILS '${DraftNum}'`
+    );
+    return del;
   }
 }

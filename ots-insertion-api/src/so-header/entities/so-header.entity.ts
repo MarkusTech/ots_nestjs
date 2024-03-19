@@ -90,7 +90,7 @@ export class SoHeader {
     Remarks: string;
 
     @Column({name: 'CreatedBy'})
-    CreatedBy: number;
+    CreatedBy: string;
 
     @Column({name: 'DateCreated'})
     DateCreated : string;
@@ -100,4 +100,10 @@ export class SoHeader {
 
     @Column({name: 'DateUpdated'})
     DateUpdated : string;
+
+    @Column({name: 'SalesCrew'})
+    SalesCrew: string;
+
+    @Column({name: 'ForeignName'})
+    ForeignName: string;
 }

@@ -5,8 +5,8 @@ export class SoDetail {
     @PrimaryGeneratedColumn({name: 'LineID'})
     LineID: number;
 
-    @Column({name: 'EntryNum'})
-    EntryNum: number;
+    @Column({name: 'DraftNum'})
+    DraftNum: string;
     
     @Column({name:'ItemCode'})
     ItemCode: string;
@@ -23,8 +23,8 @@ export class SoDetail {
     @Column({name:'UoMConv', type: "float"})
     UoMConv: number;
 
-    @Column({name:'Whs'})
-    Whs: string;
+    @Column({name:'Whse'})
+    Whse: string;
 
     @Column({name:'InvStat'})
     InvStat: string;
@@ -57,7 +57,7 @@ export class SoDetail {
     Cost: number;
 
     @Column({name:'BelCost', type: "float"})
-    BelCost: number;
+    BelCost: string;
 
     @Column({name:'ModeReleasing'})
     ModeReleasing: string;

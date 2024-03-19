@@ -27,8 +27,10 @@ export class CreateSoHeaderDto {
     SCPWDDiscTotal: number;
     TotalAmtDue: number;
     Remarks: string;
-    CreatedBy: number;
+    CreatedBy: string;
     DateCreated : string;
     UpdatedBy: number;
     DateUpdated : string;
+    SalesCrew: string;
+    ForeignName: string;
 }
