@@ -67,4 +67,10 @@ export class SoDetail {
 
     @Column({name:'GrossTotal', type: "float"})
     GrossTotal: number;
+
+    @Column({name:'TruckerForDropShipOrBackOrder', })
+    TruckerForDropShipOrBackOrder: string;
+
+    @Column({name: "PickUpLocation"})
+    PickUpLocation: string;
 }

@@ -15,9 +15,9 @@ export class SoDetailsService {
   ){}
 
   async create(createSoDetailDto: CreateSoDetailDto) {
-    const {DraftNum,ItemCode,ItemName,Quantity,UoM,UoMConv,Whse,InvStat,SellPriceBefDisc,DiscRate,SellPriceAftDisc,LowerBound,TaxCode,TaxCodePerc,TaxAmt,BelPriceDisc,Cost,BelCost,ModeReleasing,SCPWDdisc,GrossTotal} = createSoDetailDto;
+    const {DraftNum,ItemCode,ItemName,Quantity,UoM,UoMConv,Whse,InvStat,SellPriceBefDisc,DiscRate,SellPriceAftDisc,LowerBound,TaxCode,TaxCodePerc,TaxAmt,BelPriceDisc,Cost,BelCost,ModeReleasing,SCPWDdisc,GrossTotal, TruckerForDropShipOrBackOrder, PickUpLocation} = createSoDetailDto;
 
-    const detail = await this.dataSource.query(`SP_ADD_SO_DETAILS '${DraftNum}','${ItemCode}','${ItemName}',${Quantity},'${UoM}',${UoMConv},'${Whse}','${InvStat}',${SellPriceBefDisc},${DiscRate},${SellPriceAftDisc},${LowerBound},'${TaxCode}',${TaxCodePerc},${TaxAmt},${BelPriceDisc},${Cost},${BelCost},'${ModeReleasing}','${SCPWDdisc}',${GrossTotal}`);
+    const detail = await this.dataSource.query(`SP_ADD_SO_DETAILS '${DraftNum}','${ItemCode}','${ItemName}',${Quantity},'${UoM}',${UoMConv},'${Whse}','${InvStat}',${SellPriceBefDisc},${DiscRate},${SellPriceAftDisc},${LowerBound},'${TaxCode}',${TaxCodePerc},${TaxAmt},${BelPriceDisc},${Cost},${BelCost},'${ModeReleasing}','${SCPWDdisc}',${GrossTotal}, '${TruckerForDropShipOrBackOrder}', '${PickUpLocation}'`);
     return {detail} ;
   }
 

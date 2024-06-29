@@ -20,4 +20,6 @@ export class CreateSoDetailDto {
     ModeReleasing: string;
     SCPWDdisc: string;
     GrossTotal: number;
+    TruckerForDropShipOrBackOrder: string;
+    PickUpLocation: string;
 }

@@ -9,7 +9,7 @@ import { TestModule } from './test/test.module';
 @Module({
   imports: [TypeOrmModule.forRoot({
     type:'mssql',
-    host: 'localhost',
+    host: '172.16.10.217',
     port: 1433,
     username: 'sa',
     password: 'p@ssw0rd',

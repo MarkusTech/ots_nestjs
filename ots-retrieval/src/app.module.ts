@@ -15,6 +15,8 @@ import { CostModule } from './cost/cost.module';
 import { StocksAvailabilityModule } from './stocks-availability/stocks-availability.module';
 import { ScDiscountModule } from './sc-discount/sc-discount.module';
 import { SalescrewModule } from './salescrew/salescrew.module';
+import { PickupLocationModule } from './pickup-location/pickup-location.module';
+import { EmployeeModule } from './employee/employee.module';
 
 
 @Module({
@@ -35,7 +37,7 @@ import { SalescrewModule } from './salescrew/salescrew.module';
     }
   
   })
-  ,CustomerModule, ItemModule, UomModule, LowerboundModule, DiscountPriceModule, TaxCodeModule, TaxRateModule, WarehouseSohModule, SrpModule, CostModule, StocksAvailabilityModule, ScDiscountModule, SalescrewModule],
+  ,CustomerModule, ItemModule, UomModule, LowerboundModule, DiscountPriceModule, TaxCodeModule, TaxRateModule, WarehouseSohModule, SrpModule, CostModule, StocksAvailabilityModule, ScDiscountModule, SalescrewModule, PickupLocationModule, EmployeeModule],
   controllers: [AppController],
   providers: [AppService],
 })
